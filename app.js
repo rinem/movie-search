@@ -18,6 +18,9 @@ app.get("/results", function(req, res) {
 			var data = JSON.parse(body);
 			res.render("results", {data : data});
 		}
+		// else {
+		// 	console.log(error);
+		// }
 	});
 });
 

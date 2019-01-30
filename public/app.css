@@ -1,8 +1,7 @@
 
 
 body {
-	 background: rgb(2,0,36);
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(119,25,152,1) 49%, rgba(79,145,166,1) 96%); 
+	 background-color: lightblue;
 }
 
 .container {
@@ -10,13 +9,13 @@ body {
 	height: 300px;
 	margin: 50px auto;
 	border: 3px solid black;
-	background-color: #177bba;
+	background-color: #b9e9b9;
 
 }
 
 h1 {
-	color: white;
 	text-align: center;
+	font-size: 2.4em;
 }
 
 li {
@@ -31,6 +30,13 @@ p {
 	text-align: center;
 	font-size: 1.8em;
 	font-weight: 1.3em;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }
 
 #search-form_3 {
@@ -133,11 +139,20 @@ p {
 	background: -moz-linear-gradient( center bottom, rgb(89,222,27) 0%, rgb(83,179,38) 15%, rgb(66,143,27) 80%, rgb(54,120,22) 100%);
 }
 
+@media only screen and (max-width: 800px) {
+	.center {
+		width:45%;
+	}
+	
+}
 
  @media only screen and (max-width: 500px) {
   .container {
   		width: 300px;
 
+	}
+	.center {
+		width:60%;
 	}
 	p {
 		font-size: 1.4em;

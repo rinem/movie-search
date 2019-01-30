@@ -1,18 +1,24 @@
 <% include partials/header%>
 <h1>RESULTS</h1>
 
-<% data["Search"].forEach(function(movie) {%>
-	<ul>
-		<li>
-			<img src="<%=movie["Poster"] %>">
-			<p>
-			<strong>
-				<%= movie["Title"] %>
-			</strong>
-			 - <%= movie["Year"] %>
-			</p>
-		</li>
-	</ul>
-<% }) %>
+<%if (data["Search"] === 'undefined') {%>
+	<h1>Nothing to Show!</h1>
+	
+<%} else {%>
+	<% data["Search"].forEach(function(movie) {%>
+		
+			
+				<img class = "center" src="<%=movie["Poster"] %>">
+				<p>
+				<strong>
+					<%= movie["Title"] %>
+				</strong>
+				 - <%= movie["Year"] %>
+				</p>
+			
+		
+	<% }) %>
+<%}%>
+
 <% include partials/footer%>
 
