@@ -2,12 +2,11 @@
 <h1>RESULTS</h1>
 
 <%if (data["Response"] == "False") {%>
-	<h1>Nothing to Show!</h1>
+	<span><h2 align = "center">Nothing to Show!</h2></span>
 	
 <%} else {%>
-	<% data["Search"].forEach(function(movie) {%>
-		
-			
+	<% data["Search"].forEach(function(movie) {%>	
+			<div class = "titles">
 				<img class = "center" src="<%=movie["Poster"] %>">
 				<p><a href="https://www.imdb.com/title/<%=movie["imdbID"]%>/">
 				<strong>
@@ -15,8 +14,7 @@
 				</strong>
 				 - <%= movie["Year"] %>
 				</p></a>
-			
-		
+			</div>	
 	<% }) %>
 <%}%>
 
